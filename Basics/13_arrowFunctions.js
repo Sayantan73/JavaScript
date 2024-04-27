@@ -34,7 +34,7 @@ chai()
 //     return num1 + num2
 // }
 
-// const addTwo = (num1, num2) => (num1 + num2)                // work same dont't need return when we use parenthesis()
+// const addTwo = (num1, num2) => (num1 + num2)                // implesit return: work same dont't need return when we use parenthesis()
 
 // const addTwo = (num1, num2) => num1 + num2                  // work same dont't need return  
 
