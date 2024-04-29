@@ -18,6 +18,6 @@ console.log(val1);
 
 
 // ternary operater simple version of if-else statement
-condition ? true : false
+// condition ? true : false
 const iseTeaPrice = 100
 iseTeaPrice <= 80 ? console.log("less than 80") : console.log("Greater than 80");
