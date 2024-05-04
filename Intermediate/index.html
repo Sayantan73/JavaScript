@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JavaScript</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1>Hello World</h1>
+    <div class="parent">
+        <!-- this is an comment for adding days as children -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    let parents = document.querySelector(".parent")
+    console.log(parents);
+    console.log(parents.children); 
+    for (let i = 0; i < parents.children.length; i++) {
+        console.log(parents.children[i].innerHTML);  
+    }
+
+    console.log(parents.firstElementChild.style.color = "orange");
+    console.log(parents.lastElementChild);
+
+    const dayOne = document.querySelector(".day")
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+
+    console.log("Nodes: ", parents.childNodes);
+</script>
+</html>
