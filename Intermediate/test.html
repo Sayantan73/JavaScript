@@ -8,7 +8,12 @@
 </head>
 
 <body>
-    <button onclick="createDiv()" >Click me</button>
+    <button onclick="createDiv()" >Click Me</button>
+    <button class="list">add language</button>
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+
 
 </body>
 <script>
@@ -31,8 +36,10 @@
     }
 
     const button = document.querySelector("button")
-    button.style.display = "fixed"
     button.style.display = "block"
+    button.style.position = "fixed"
+    button.style.top = "20px"
+    button.style.left = "700px"
 
 
     const createDiv = () => {
@@ -44,6 +51,14 @@
         console.log(div);
         document.body.appendChild(div)
     }
+
+    const createList = () => {
+        const newList = document.createElement("li")
+        newList.textContent = "java";
+        document.querySelector(".lang").appendChild(newList)
+    }
+    document.querySelector(".list").addEventListener( "click" , createList)
+
 </script>
 
 </html>
