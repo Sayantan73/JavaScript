@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Chai with Javascirpt</h1>
+    <button id="end">end</button>
+
+    <h2 id="subHeading">I am a Programmer</h2>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const name = function() {
+        document.querySelector("#heading").innerHTML = "Chai with Karan"  
+    }
+    const changes = setTimeout(name, 2000);
+
+    document.querySelector("#end").addEventListener("click", ()=>{
+        clearTimeout(changes)
+        console.log("no more change");
+    })
+
+    const changeSubHeading = (text) => {
+        document.querySelector("#subHeading").innerHTML = text
+        console.log(Date.now())   
+    }
+    let intervalChange;
+    document.querySelector("#start").addEventListener("click", ()=>{
+        intervalChange = setInterval(changeSubHeading,1000, "I am a Developer");
+    })
+    document.querySelector("#stop").addEventListener("click", ()=>{
+        clearInterval(intervalChange);
+        console.log("Stopped");
+    })
+
+    
+
+</script>
+</html>

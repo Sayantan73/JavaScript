@@ -30,3 +30,33 @@
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.querySelector("#owl").onclick = function(){alert(owl)}
+    
+   // false = Bubbling mode bottom to top , true = capturing mode top to bottom
+    // document.querySelector("#images").addEventListener("click", function(e){
+    //     console.log("images clicked")
+    // }, false)
+    // document.getElementById("owl").addEventListener("click", function(e){
+    //     console.log("owl clicked")
+    //     e.stopPropagation()  // stopes bubbling up propogation
+    // }, false)
+
+    // document.querySelector("#google").addEventListener("click", function (e) {
+    //     e.preventDefault()
+    // })
+
+    document.querySelector("#images").addEventListener("click", function(e){
+        console.log(e.target.parentNode)
+        if (e.target.tagName === "IMG") {
+            
+       
+        let object = e.target.parentNode
+        object.remove()
+    }
+        // object.parentNode.removeChild(object)
+    })
+
+</script>
+
+</html>
